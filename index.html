@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+    />
+    <title>Sort Visualizer</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="brand">Sort Visualizer</div>
+      <div class="controls">
+        <div id="speed-label">Speed</div>
+        <input
+          type="range"
+          id="speed-slider"
+          min="1"
+          max="10"
+          value="5"
+          step="1"
+          class="slider"
+        />
+        <label for="sorting-algorithm">Randomize</label>
+        <button onclick="init()"><i class="material-icons">shuffle</i></button>
+        <label for="sorting-algorithm">Sorting Algorithm</label>
+        <select id="sorting-algorithm">
+          <option value="selection">Selection Sort</option>
+          <option value="bubble">Bubble Sort</option>
+          <option value="insertion">Insertion Sort</option>
+          <!-- <option value="merge">Merge Sort</option>
+          <option value="quick">Quick Sort</option> -->
+          <option value="heap">Heap Sort</option>
+        </select>
+        <button onclick="play()">
+          <i class="material-icons">play_arrow</i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="square-box">
+      <h2>Sorting Algorithms</h2>
+      <p>
+        Sorting algorithms arrange a set of data into a specific order. Computer
+        science relies heavily on sorting for various tasks. There are two main
+        types: logarithmic (complexity proportional to log(n)) and quadratic
+        (complexity proportional to n^2). Algorithms are evaluated in terms of
+        time complexity (speed) and space complexity (memory usage). Examples
+        include Quick sort (logarithmic, O(n × log n)) and Bubble sort
+        (quadratic, O(n^2)). Sorting algorithms help in understanding
+        computational efficiency.
+      </p>
+      <p>
+        Space and time complexity can also be further subdivided into 3
+        different cases: best case, average case and worst case.
+      </p>
+      <p>
+        Sorting algorithms can be difficult to understand and it's easy to get
+        confused. We believe visualizing sorting algorithms can be a great way
+        to better understand their functioning while having fun!
+      </p>
+    </div>
+
+    <div id="container" class="flex-container"></div>
+
+    <script src="script.js"></script>
+    <script src="selectionSort.js"></script>
+    <script src="bubbleSort.js"></script>
+    <script src="insertionSort.js"></script>
+    <script src="heapSort.js"></script>
+
+    <footer class="footer">
+      <div class="footer-content">Made by Saurabh Shukla with ❤️</div>
+    </footer>
+  </body>
+</html>
